@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectMVVM.Model
 {
@@ -80,7 +79,6 @@ namespace ProjectMVVM.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 if (reader != null) reader.Close();
                 if (command != null) ReleaseConnection(command.Connection);
 
@@ -102,7 +100,6 @@ namespace ProjectMVVM.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
 
                 if (command != null) ReleaseConnection(command.Connection);
 
@@ -122,7 +119,6 @@ namespace ProjectMVVM.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 if (con != null) ReleaseConnection(con);
                 throw ex;
             }
@@ -163,7 +159,6 @@ namespace ProjectMVVM.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 if (reader != null) reader.Close();
                 if (command != null) ReleaseConnection(command.Connection);
 
@@ -187,7 +182,6 @@ namespace ProjectMVVM.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
 
                 if (command != null) ReleaseConnection(command.Connection);
 

@@ -202,14 +202,14 @@ namespace festivalappWinStore.Data
             }
         }
 
-        private ObservableCollection<DataItem> _items = new ObservableCollection<DataItem>();
-        public ObservableCollection<DataItem> Items
+        private List<DataItem> _items = new List<DataItem>();
+        public List<DataItem> Items
         {
             get { return this._items; }
         }
 
-        private ObservableCollection<DataItem> _topItem = new ObservableCollection<DataItem>();
-        public ObservableCollection<DataItem> TopItems
+        private List<DataItem> _topItem = new List<DataItem>();
+        public List<DataItem> TopItems
         {
             get {return this._topItem; }
         }
@@ -225,8 +225,8 @@ namespace festivalappWinStore.Data
     {
         private static DataSource _sampleDataSource = new DataSource();
 
-        private ObservableCollection<DataGroup> _allGroups = new ObservableCollection<DataGroup>();
-        public ObservableCollection<DataGroup> AllGroups
+        private List<DataGroup> _allGroups = new List<DataGroup>();
+        public List<DataGroup> AllGroups
         {
             get { return this._allGroups; }
         }

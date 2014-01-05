@@ -4,8 +4,6 @@ using System.Collections.ObjectModel;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 namespace ProjectMVVM.Model
 {
     class Genre
@@ -15,9 +13,9 @@ namespace ProjectMVVM.Model
         public String Name { get; set; }
         public bool checkgenre{get; set;}
 
-        internal static ObservableCollection<Genre> getGenre()
+        internal static List<Genre> getGenre()
         {
-            ObservableCollection<Genre> lijst = new ObservableCollection<Genre>();
+            List<Genre> lijst = new List<Genre>();
 
             string SQL = "SELECT * FROM Genre";
             DbDataReader reader = Database.GetData(SQL);
@@ -34,9 +32,9 @@ namespace ProjectMVVM.Model
             return lijst;
         }
 
-        internal static ObservableCollection<Genre> getGenres(int id)
+        internal static List<Genre> getGenres(int id)
         {
-            ObservableCollection<Genre> Genrelijst = new ObservableCollection<Genre>();
+            List<Genre> Genrelijst = new List<Genre>();
 
             string SQLGenre = "SELECT id,Genre.Genre FROM Genre JOIN BandGenre ON Genre.Id=BandGenre.Genre AND Band=@Id";
             DbParameter par1 = Database.AddParameter("@Id", id);
